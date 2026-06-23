@@ -12,7 +12,7 @@ A comprehensive data analysis and business intelligence project on the **Olist B
 * `sales_analysis.ipynb`: A complete Jupyter Notebook showcasing the data cleaning steps, code, analysis answers, and inline charts.
 * `dashboard.xlsx`: The final 1-page executive-ready management dashboard.
 * `business_insights_report.md`: Detailed business insights report containing 5 actionable recommendations and a summary of findings.
-* `visualizations/`: Directory containing the 6 custom-designed analytical charts.
+* `visualizations/`: Directory containing the 10 custom-designed analytical charts.
 * `README.md`: This file, documenting the project.
 
 ---
@@ -30,7 +30,7 @@ Execute the analysis script to load raw CSVs, apply cleaning rules, output analy
 ```bash
 python run_analysis.py
 ```
-This script will output the answers to the console, save them in `analysis_answers.txt`, and create a `visualizations/` folder containing the 6 PNG charts.
+This script will output the answers to the console and create a `visualizations/` folder containing the 10 PNG charts.
 
 ### 3. Generate the Executive Excel Dashboard
 Run the dashboard generator script to build the styled Excel dashboard containing KPI cards, performance tables, and embedded visualizations:
@@ -66,7 +66,7 @@ This generates the interactive workbook `dashboard.xlsx` in the root folder.
 
 ---
 
-## 📈 Visualizations Generated (Minimum 6 Charts)
+## 📈 Visualizations Generated (Minimum 10 Charts)
 
 All charts are saved in the `visualizations/` folder:
 1. `01_revenue_by_category.png` (Bar chart: Top 10 product categories by revenue)
@@ -75,6 +75,10 @@ All charts are saved in the `visualizations/` folder:
 4. `04_order_values_distribution.png` (Histogram: Distribution of total order values with mean/median markers)
 5. `05_review_scores_distribution.png` (Donut/Pie chart: Distribution of customer review ratings)
 6. `06_category_monthly_heatmap.png` (Heatmap: Top 10 categories monthly revenue showing seasonal trends)
+7. `07_payment_types_distribution.png` (Donut/Pie chart: Payment method distribution by transaction value)
+8. `08_order_volume_by_day_of_week.png` (Bar chart: Order volume by day of the week)
+9. `09_average_freight_by_state.png` (Bar chart: Top 10 states by highest average freight/shipping cost)
+10. `10_delivery_time_vs_review_score.png` (Bar chart: Average actual delivery lead time in days for each review score)
 
 ---
 
@@ -87,16 +91,18 @@ The dashboard is built programmatically as a single-page summary for management 
   * Top 10 categories by revenue and % share.
   * Regional performance (Top 10 states by revenue and % share).
   * Review score distribution with % share.
-* **Embedded Visualizations**: The top 4 custom charts are embedded directly in the spreadsheet below the data tables, allowing managers to inspect data and visuals in one place.
+  * Payment method revenue breakdown and % share.
+  * Average delivery lead time in days vs customer review rating.
+* **Embedded Visualizations**: All 10 custom charts are embedded directly in the spreadsheet below the data tables, allowing managers to inspect data and visuals in one place.
 
 ---
 
 ## 💡 Key Actionable Insights (Highlights)
 
 1. **Leverage Health & Beauty**: Introduce subscription-based buying options for this recurring purchase category.
-2. **Holiday Scaling**: Implement a 90-day logistics plan ahead of the November Black Friday peak to prevent shipping bottlenecks.
-3. **São Paulo Logistics Hub**: Establish a dedicated fulfillment center in SP to offer same-day/next-day shipping, covering 39% of the customer base.
+2. **Holiday Scaling**: Implement a 90-day logistics plan ahead of the November Black Friday peak to prevent shipping bottlenecks, especially for early-week order volume peaks (Mondays through Wednesdays).
+3. **São Paulo Logistics Hub**: Establish a dedicated fulfillment center in SP to offer same-day/next-day shipping, covering 39% of the customer base, and manage freight costs.
 4. **Free Shipping Threshold**: Set a free-shipping limit at R$ 120.00 (above the R$ 90.00 median) to lift average cart sizes.
-5. **Logistics SLA & Customer Service Recovery**: Automatically flag low ratings and address carrier shipping delays to reduce the 11.1% of 1-star reviews.
+5. **Logistics SLA & Customer Service Recovery**: Automatically flag low ratings and address carrier shipping delays (which average 20.3 days for 1-star reviews compared to 10.2 days for 5-star reviews) to reduce the 11.1% of 1-star reviews.
 
 *(For detailed insights, read the full [Business Insights Report](file:///c:/Users/Lenovo/Desktop/PROJECT%2001%20E-Commerce%20Sales%20Analysis/business_insights_report.md)).*
