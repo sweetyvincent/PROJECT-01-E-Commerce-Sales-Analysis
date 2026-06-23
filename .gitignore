@@ -1,0 +1,5 @@
+*.csv
+.gemini/
+.agents/
+scratch/
+analysis_answers.txt
